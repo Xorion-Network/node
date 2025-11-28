@@ -7,10 +7,12 @@ import UseCases from './components/Usecases/Usecases';
 import BlogNewsroom from './components/Blogs/Blogs';
 import DevPortal from './pages/Developers';
 import Ecosystem from './components/Ecosystem/Ecosystem';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

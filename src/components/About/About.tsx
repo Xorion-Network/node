@@ -58,7 +58,7 @@ const About = () => {
     {
       icon: <FaBolt className="w-8 h-8 md:w-10 md:h-10" />,
       title: "Lightning Fast",
-      description: "100K+ TPS with sub-second finality",
+      description: "100k+ to 5k+  TPS with sub-second finality",
       color: "from-yellow-500 to-orange-500",
       delay: 0.3
     },
@@ -111,6 +111,12 @@ const About = () => {
       photo: "/RGB/Esang Jimmy.png"
     },
     {
+      name: "Jabulani Usen",
+      position: "Full Stack Developer",
+      linkedin: "https://x.com/JabulaniUsen",
+      photo: "/RGB/jabulani usen.png"
+    },
+    {
       name: "Clement Kalu",
       position: "Full Stack Developer",
       linkedin: "https://www.linkedin.com/in/inspikalu/",
@@ -139,12 +145,6 @@ const About = () => {
       position: "Graphics Designer",
       linkedin: "https://www.linkedin.com/in/paul-james-2005498b",
       photo: "/RGB/James Onyero.png"
-    },
-    {
-      name: "Ahmed Tharwat",
-      position: "Bots and Community Manager",
-      linkedin: "https://www.linkedin.com/in/ahmed-eltahawy-26789b235",
-      photo: "/RGB/Ahmed Tharwat.png"
     },
     {
       name: "Elizabeth Moore",
@@ -220,7 +220,7 @@ const About = () => {
                   transition={{ type: 'tween', duration: 0.18 }}
                   className="bg-white/10 backdrop-blur-xl rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/20"
                 >
-                  <div className="text-2xl md:text-4xl font-bold text-white">100K+</div>
+                  <div className="text-2xl md:text-4xl font-bold text-white">100k+ to 5k+</div>
                   <div className="text-gray-400 text-xs md:text-sm">TPS</div>
                 </motion.div>
                 <motion.div 

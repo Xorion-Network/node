@@ -4,7 +4,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '../components/Layout/Navbar';
 import FooterContent from '../components/Home/Footer';
-import { FaTwitter, FaDiscord, FaTelegram, FaGithub, FaReddit, FaMedium } from 'react-icons/fa';
+import { FaDiscord, FaTelegram, FaGithub, FaReddit, FaMedium } from 'react-icons/fa';
+import { SiX } from 'react-icons/si';
 gsap.registerPlugin(ScrollTrigger);
 
 const forumPosts = [
@@ -14,45 +15,45 @@ const forumPosts = [
 ];
 
 const events = [
-  { date: '2024-12-15', title: 'TGE Coming Soon', desc: 'Token Generation Event announcement' },
-  { date: '2024-12-20', title: 'LayerOneX Partnership Coming Soon', desc: 'Strategic partnership announcement' },
-  { date: '2024-12-25', title: 'XOR Listing Coming Soon', desc: 'Exchange listing updates' },
+  { date: '', title: 'Launchpads IDO', desc: 'Coming soon - launchpads token sales and partnerships' },
+  { date: '', title: '$XOR TGE & Listing', desc: 'Coming soon - Token Generation Event and Listing updates' },
+  { date: '', title: 'Developer bounty', desc: 'DApps development on Xorion Network' },
 ];
 
 const socialLinks = [
   {
     label: "X",
-    href: "https://x.com/xorionchain?s=21",
-    icon: FaTwitter,
+    href: "https://x.com/Xorion_Network",
+    icon: SiX,
     description: "Official X (Twitter)"
   },
   {
     label: "Discord",
-    href: "https://discord.com/invite/c4VVaRVdKq",
+    href: "https://discord.gg/TWxeqcbwu7",
     icon: FaDiscord,
     description: "Community chat"
   },
   {
     label: "Telegram",
-    href: "https://t.me/XorionChainChannel",
+    href: "https://t.me/xorion_network",
     icon: FaTelegram,
     description: "Community chat"
   },
   {
     label: "GitHub",
-    href: "https://github.com/XORIONCHAIN",
+    href: "https://github.com/Xorion-Network",
     icon: FaGithub,
     description: "Source code and issues"
   },
   {
     label: "Linktree",
-    href: "https://linktr.ee/xorionchain",
+    href: "https://linktr.ee/xorionnetwork",
     icon: FaReddit,
     description: "All our links"
   },
   {
     label: "Medium",
-    href: "https://medium.com/@xorionchain",
+    href: "https://medium.com/@xorion_network",
     icon: FaMedium,
     description: "Blog & Announcements"
   }
