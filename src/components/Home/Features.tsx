@@ -77,31 +77,31 @@ export default function Features() {
       icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#00e676]" />,
       title: "Quantum-Resistant Zero-Knowledge Proofs",
       description: "Future-proof privacy with post-quantum cryptography that ensures your data remains secure even against quantum computer attacks.",
-      gradient: "from-green-500 to-emerald-500"
+      gradient: "from-green-500 to-emerald-500 opacity-50"
     },
     {
       icon: <Crosshair className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#00e676]" />,
       title: "Cross-Chain Intent Protocol",
       description: "Seamless interoperability across all blockchain networks, enabling unified experiences across different ecosystems.",
-      gradient: "from-emerald-500 to-green-500"
+      gradient: "from-emerald-500 to-green-500 opacity-50"
     },
     {
       icon: <Cpu className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#00e676]" />,
       title: "Adaptive Security Framework",
       description: "Self-evolving protection system that automatically adapts to emerging threats using advanced machine learning algorithms.",
-      gradient: "from-green-500 to-emerald-500"
+      gradient: "from-green-500 to-emerald-500 opacity-50"
     },
     {
       icon: <Network className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#00e676]" />,
       title: "Decentralized Security Oracle Network",
       description: "Real-time threat intelligence gathered from distributed nodes worldwide to provide comprehensive security coverage.",
-      gradient: "from-emerald-500 to-green-500"
+      gradient: "from-emerald-500 to-green-500 opacity-50"
     },
     {
       icon: <Code className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#00e676]" />,
       title: "Quantum-Secure Smart Contract Language",
       description: "Revolutionary programming language designed for the post-quantum era, ensuring smart contracts remain secure forever.",
-      gradient: "from-green-500 to-emerald-500"
+      gradient: "from-green-500 to-emerald-500 opacity-50"
     }
   ];
 
@@ -165,7 +165,7 @@ export default function Features() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="relative w-full bg-black/50 backdrop-blur-xl rounded-2xl shadow-xl border border-white/10 p-6 md:p-8 mt-6"
+                    className="relative w-full bg-black/50 backdrop-blur-xl rounded-2xl shadow-md border border-white/10 p-6 md:p-8 mt-6"
                   >
                     {/* Content Section */}
                     <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
@@ -238,7 +238,10 @@ export default function Features() {
                  
                   {/* Button */}
                   <div className="flex justify-start mt-4 xl:mt-6 2xl:mt-8">
-                    <button className="bg-[#00e676] hover:bg-[#00c853] text-black font-medium px-4 xl:px-6 2xl:px-8 py-2 xl:py-3 2xl:py-4 rounded-lg text-sm xl:text-base 2xl:text-lg font-sans transition-all duration-200 shadow-md hover:shadow-lg">
+                    <button 
+                      onClick={() => window.open('https://github.com/Xorion-Network/xorion-main/blob/master/Whitepaper/Xorion%20Whitepaper%201.0.0.3.pdf', '_blank')}
+                      className="bg-[#00e676] hover:bg-[#00c853] text-black font-medium px-4 xl:px-6 2xl:px-8 py-2 xl:py-3 2xl:py-4 rounded-lg text-sm xl:text-base 2xl:text-lg font-sans transition-all duration-200 shadow-md hover:shadow-lg"
+                    >
                       Learn More
                     </button>
                   </div>

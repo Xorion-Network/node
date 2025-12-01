@@ -162,20 +162,20 @@ const Ecosystem = () => {
     }
   ];
 
-  // Updated tokenomics data based on XorionChain GitBook documentation
+  // Updated tokenomics data
   const tokenomicsData = [
     {
       category: "Ecosystem & Community",
-      percentage: 35,
-      amount: "350M XOR",
+      percentage: 30,
+      amount: "300M XOR",
       description: "Community incentives and ecosystem development",
       color: "from-blue-500 to-cyan-500",
       icon: <FaUsers className="w-6 h-6" />
     },
     {
       category: "Core Team & Advisors",
-      percentage: 20,
-      amount: "200M XOR", 
+      percentage: 18,
+      amount: "180M XOR", 
       description: "Team and advisor allocations with vesting",
       color: "from-purple-500 to-pink-500",
       icon: <FaCrown className="w-6 h-6" />
@@ -189,12 +189,12 @@ const Ecosystem = () => {
       icon: <FaCode className="w-6 h-6" />
     },
     {
-      category: "Validator Rewards & Security Pool",
-      percentage: 10,
-      amount: "100M XOR",
-      description: "Network security and validator rewards",
-      color: "from-yellow-500 to-orange-500",
-      icon: <FaShieldAlt className="w-6 h-6" />
+      category: "Reserve",
+      percentage: 15,
+      amount: "150M XOR",
+      description: "Reserved for future ecosystem needs",
+      color: "from-indigo-500 to-purple-500",
+      icon: <FaLock className="w-6 h-6" />
     },
     {
       category: "Strategic Partners",
@@ -205,12 +205,12 @@ const Ecosystem = () => {
       icon: <FaHandshake className="w-6 h-6" />
     },
     {
-      category: "Reserve",
-      percentage: 8,
-      amount: "80M XOR",
-      description: "Reserved for future ecosystem needs",
-      color: "from-indigo-500 to-purple-500",
-      icon: <FaLock className="w-6 h-6" />
+      category: "Validator Rewards",
+      percentage: 10,
+      amount: "100M XOR",
+      description: "Network security and validator rewards",
+      color: "from-yellow-500 to-orange-500",
+      icon: <FaShieldAlt className="w-6 h-6" />
     },
     {
       category: "Public Sale",
@@ -222,7 +222,7 @@ const Ecosystem = () => {
     }
   ];
 
-  // Updated vesting schedule based on GitBook documentation
+  // Updated vesting schedule
   const vestingSchedule = [
     {
       category: "Ecosystem & Community",
@@ -230,22 +230,30 @@ const Ecosystem = () => {
       vestingPeriod: "24 months",
       description: "5% at TGE, 24-month linear vesting",
       color: "from-blue-500 to-cyan-500",
-      amount: "350M XOR"
+      amount: "300M XOR"
     },
     {
       category: "Core Team & Advisors",
-      initialRelease: "15%",
+      initialRelease: "0%",
       vestingPeriod: "36 months",
-      description: "15% at TGE, 36-month vesting",
+      description: "12-month cliff, 36-month vesting",
       color: "from-purple-500 to-pink-500",
-      amount: "200M XOR"
+      amount: "180M XOR"
     },
     {
       category: "Developer Incentives",
       initialRelease: "0%",
-      vestingPeriod: "24 months",
-      description: "3-month cliff, 24-month linear vesting",
+      vestingPeriod: "Quarterly",
+      description: "Quarterly disbursements",
       color: "from-green-500 to-emerald-500",
+      amount: "150M XOR"
+    },
+    {
+      category: "Reserve",
+      initialRelease: "0%",
+      vestingPeriod: "Locked",
+      description: "Locked for future use",
+      color: "from-indigo-500 to-purple-500",
       amount: "150M XOR"
     },
     {
@@ -257,26 +265,18 @@ const Ecosystem = () => {
       amount: "100M XOR"
     },
     {
-      category: "Validator Rewards & Security Pool",
+      category: "Validator Rewards",
       initialRelease: "Continuous",
       vestingPeriod: "Ongoing",
-      description: "Continuous distribution via staking rewards",
+      description: "Continuous via staking",
       color: "from-yellow-500 to-orange-500",
       amount: "100M XOR"
     },
     {
-      category: "Reserve",
-      initialRelease: "0%",
-      vestingPeriod: "Locked",
-      description: "Locked for future ecosystem use",
-      color: "from-indigo-500 to-purple-500",
-      amount: "80M XOR"
-    },
-    {
       category: "Public Sale",
-      initialRelease: "50%",
-      vestingPeriod: "6 months",
-      description: "50% unlock, 50% vesting over 6 months",
+      initialRelease: "TBD",
+      vestingPeriod: "TBD",
+      description: "TBD (Launchpad/IDO)",
       color: "from-cyan-500 to-blue-500",
       amount: "20M XOR"
     }
@@ -330,7 +330,7 @@ const Ecosystem = () => {
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">
-                  35%
+                  30%
                 </div>
                 <div className="text-gray-400 text-sm">Ecosystem & Community</div>
               </div>
@@ -338,7 +338,7 @@ const Ecosystem = () => {
                 <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
                   10%
                 </div>
-                <div className="text-gray-400 text-sm">Security Pool</div>
+                <div className="text-gray-400 text-sm">Validator Rewards</div>
               </div>
             </motion.div>
           </motion.div>
@@ -373,7 +373,7 @@ const Ecosystem = () => {
                 className="parallax-card relative group cursor-pointer"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${app.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300`}></div>
-                <div className="relative bg-black/50 backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <div className="relative bg-black/50 backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`p-4 rounded-2xl bg-gradient-to-br ${app.color}`}>
                       {app.icon}
@@ -426,7 +426,7 @@ const Ecosystem = () => {
                 className="parallax-card relative group cursor-pointer"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${useCase.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300`}></div>
-                <div className="relative bg-black/50 backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <div className="relative bg-black/50 backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-300 h-full flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`p-4 rounded-2xl bg-gradient-to-br ${useCase.color}`}>
                       {useCase.icon}
@@ -479,11 +479,11 @@ const Ecosystem = () => {
                 className="parallax-card relative group cursor-pointer"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${dapp.color} rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-300`}></div>
-                <div className="relative bg-black/60 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <div className="relative bg-black/60 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300 h-full flex flex-col">
                   <div className="flex justify-center mb-4">{dapp.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2 text-center">{dapp.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4 text-center">{dapp.description}</p>
-                  <div className="flex justify-between items-center">
+                  <p className="text-gray-300 text-sm mb-4 text-center flex-grow">{dapp.description}</p>
+                  <div className="flex justify-center items-center">
                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                       dapp.status === 'Live' ? 'bg-green-500/20 text-green-400' :
                       dapp.status === 'Beta' ? 'bg-yellow-500/20 text-yellow-400' :
@@ -491,7 +491,6 @@ const Ecosystem = () => {
                     }`}>
                       {dapp.status}
                     </span>
-                    <span className="text-gray-400 text-sm">TVL: {dapp.tvl}</span>
                   </div>
                 </div>
               </motion.div>
@@ -786,7 +785,7 @@ const Ecosystem = () => {
                 className="parallax-card relative group"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                <div className="relative bg-black/50 backdrop-blur-xl rounded-3xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <div className="relative bg-black/50 backdrop-blur-xl rounded-3xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300 h-full flex flex-col">
                   <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-4">
                     {step.step}
                   </div>

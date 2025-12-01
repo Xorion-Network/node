@@ -122,7 +122,7 @@ const BlogNewsroom: React.FC = () => {
     try {
       setError(null);
       const response = await fetch(
-        'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@xorionchain'
+        'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@xorion_network'
       );
       
       if (!response.ok) {
@@ -147,8 +147,8 @@ const BlogNewsroom: React.FC = () => {
             icon: getCategoryIcon(getCategoryFromContent(item.title || '', item.description || '')),
             views: `${Math.floor(Math.random() * 20 + 5)}.${Math.floor(Math.random() * 9)}K`,
             tags: extractTags(item.title || '', item.description || ''),
-            mediumLink: item.link || 'https://medium.com/@xorionchain',
-            twitterLink: 'https://x.com/xorionchain',
+            mediumLink: item.link || item.guid || `https://medium.com/@xorion_network`,
+            twitterLink: 'https://x.com/Xorion_Network',
             source: 'medium',
             thumbnail: item.thumbnail || null,
             featured: index < 2
@@ -218,8 +218,8 @@ const BlogNewsroom: React.FC = () => {
       icon: <FaRocket className="w-8 h-8 text-blue-400" />,
       views: "1.2K",
       tags: ["announcement", "community"],
-      mediumLink: "https://medium.com/@xorionchain",
-      twitterLink: "https://x.com/xorionchain",
+      mediumLink: "https://medium.com/@xorion_network",
+      twitterLink: "https://x.com/Xorion_Network",
       source: 'medium',
       featured: true
     },
@@ -234,8 +234,8 @@ const BlogNewsroom: React.FC = () => {
       icon: <FaMedium className="w-8 h-8 text-green-400" />,
       views: "856",
       tags: ["social", "updates"],
-      mediumLink: "https://medium.com/@xorionchain",
-      twitterLink: "https://x.com/xorionchain",
+      mediumLink: "https://medium.com/@xorion_network",
+      twitterLink: "https://x.com/Xorion_Network",
       source: 'medium',
       featured: false
     }
@@ -247,13 +247,13 @@ const BlogNewsroom: React.FC = () => {
         {
           id: 'twitter-1',
           title: "🚀 XorionChain Mainnet 4.0 is LIVE!",
-          excerpt: "The future of quantum-resistant blockchain is here. Experience 100K+ TPS with unbreakable security. #QuantumProof #Blockchain",
+          excerpt: "The future of quantum-resistant blockchain is here. Experience 100k+ to 5k+ TPS with unbreakable security. #QuantumProof #Blockchain",
           category: 'network',
           author: "@xorionchain",
           date: "2025-09-15",
           source: 'twitter',
-          twitterLink: "https://x.com/xorionchain",
-          mediumLink: "https://medium.com/@xorionchain",
+          twitterLink: "https://x.com/Xorion_Network",
+          mediumLink: "https://medium.com/@xorion_network",
           tags: ['mainnet', 'quantum', 'launch'],
           engagement: {
             likes: 2847,
@@ -269,8 +269,8 @@ const BlogNewsroom: React.FC = () => {
           author: "@xorionchain",
           date: "2025-09-14",
           source: 'twitter',
-          twitterLink: "https://x.com/xorionchain",
-          mediumLink: "https://medium.com/@xorionchain",
+          twitterLink: "https://x.com/Xorion_Network",
+          mediumLink: "https://medium.com/@xorion_network",
           tags: ['security', 'quantum', 'audit'],
           engagement: {
             likes: 1923,
@@ -306,6 +306,15 @@ const BlogNewsroom: React.FC = () => {
     };
 
     loadContent();
+
+    // Auto-refresh Medium posts every 5 minutes to get latest posts
+    const refreshInterval = setInterval(() => {
+      fetchMediumPosts();
+    }, 5 * 60 * 1000); // 5 minutes
+
+    return () => {
+      clearInterval(refreshInterval);
+    };
 
     const setupAnimations = () => {
       try {
@@ -422,7 +431,7 @@ const BlogNewsroom: React.FC = () => {
 
               <div className="flex items-center justify-center gap-6">
                 <a
-                  href="https://medium.com/@xorionchain"
+                  href="https://medium.com/@xorion_network"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-6 py-3 bg-green-500/20 hover:bg-green-500/30 text-green-400 rounded-xl transition-all duration-300 group"
@@ -432,7 +441,7 @@ const BlogNewsroom: React.FC = () => {
                   <FaExternalLinkAlt className="w-3 h-3" />
                 </a>
                 <a
-                  href="https://x.com/xorionchain"
+                  href="https://x.com/Xorion_Network"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-6 py-3 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-xl transition-all duration-300 group"
@@ -761,7 +770,7 @@ const BlogNewsroom: React.FC = () => {
               
               <div className="flex items-center justify-center gap-6">
                 <a
-                  href="https://medium.com/@xorionchain"
+                  href="https://medium.com/@xorion_network"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-green-500/20 hover:bg-green-500/30 text-green-400 rounded-lg transition-all duration-300 group"
@@ -771,7 +780,7 @@ const BlogNewsroom: React.FC = () => {
                   <FaExternalLinkAlt className="w-3 h-3" />
                 </a>
                 <a
-                  href="https://x.com/xorionchain"
+                  href="https://x.com/Xorion_Network"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-lg transition-all duration-300 group"

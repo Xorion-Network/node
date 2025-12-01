@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaBook, FaCode, FaRocket, FaCog, FaTerminal, FaWallet, 
   FaFileCode, FaShieldAlt, FaChevronRight,
-  FaGithub, FaDownload, FaExternalLinkAlt, FaSearch, FaLayerGroup,
+  FaDownload, FaExternalLinkAlt, FaSearch, FaLayerGroup,
   FaNetworkWired, FaDatabase, FaLightbulb,
   FaTools, FaBookOpen, FaClipboardList, FaCircle
 } from 'react-icons/fa';
@@ -86,10 +86,10 @@ const DevPortal = () => {
       type: 'external'
     },
     {
-      title: 'White Paper',
-      description: 'Official white paper and technical vision',
+      title: 'Whitepaper v3',
+      description: 'Official whitepaper and technical vision',
       icon: <FaClipboardList className="w-6 h-6" />,
-      link: '/whitepaper.pdf',
+      link: 'https://github.com/Xorion-Network/xorion-main/blob/master/Whitepaper/Xorion%20Whitepaper%201.0.0.3.pdf',
       color: 'from-green-500 to-cyan-500',
       type: 'pdf'
     },
@@ -293,11 +293,7 @@ const DevPortal = () => {
                       {sdk.icon}
                     </div>
                     <h4 className="text-white font-semibold mb-2">{sdk.name} SDK</h4>
-                    <p className="text-gray-400 text-sm mb-4">Official SDK for {sdk.name} development</p>
-                    <div className="flex items-center gap-2">
-                      <FaDownload className="w-4 h-4 text-blue-400" />
-                      <span className="text-blue-400 text-sm">Install Package</span>
-                    </div>
+                    <p className="text-gray-400 text-sm">Official SDK for {sdk.name} development</p>
                   </motion.div>
                 ))}
               </div>
@@ -337,11 +333,7 @@ const DevPortal = () => {
                         {wallet.status}
                       </span>
                     </div>
-                    <p className="text-gray-400 text-sm mb-4">Integration guide and code examples</p>
-                    <div className="flex items-center text-blue-400 hover:text-blue-300 transition-colors cursor-pointer">
-                      <span className="text-sm">View Integration</span>
-                      <FaExternalLinkAlt className="w-3 h-3 ml-2" />
-                    </div>
+                    <p className="text-gray-400 text-sm">Integration guide and code examples</p>
                   </motion.div>
                 ))}
               </div>
@@ -377,17 +369,7 @@ const DevPortal = () => {
                           </div>
                         </div>
                         <h4 className="text-white font-semibold mb-2">{template.name}</h4>
-                        <p className="text-gray-300 text-sm mb-4">{template.description}</p>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
-                            <FaDownload className="w-4 h-4 mr-2" />
-                            <span className="text-sm">Download</span>
-                          </div>
-                          <div className="flex items-center text-green-400">
-                            <FaGithub className="w-4 h-4 mr-2" />
-                            <span className="text-sm">View Code</span>
-                          </div>
-                        </div>
+                        <p className="text-gray-300 text-sm">{template.description}</p>
                       </div>
                     </div>
                   </motion.div>

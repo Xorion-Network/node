@@ -28,7 +28,7 @@ const Herovid = () => {
     },
     {
       icon: <FaBolt className="w-8 h-8" />,
-      title: "100K+ TPS",
+      title: "100k+ to 5k+ TPS",
       description: "Lightning-fast transaction processing with sub-second finality",
       gradient: "from-blue-500 to-cyan-500",
       delay: 0.2
@@ -99,7 +99,7 @@ const Herovid = () => {
             >
               Experience the next generation of decentralized technology. 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 font-bold">
-                {" "}Quantum-proof security. Infinite scalability. Zero compromises.
+                {" "}Quantum security. Infinite scalability. Zero compromises.
               </span>
             </motion.p>
           </motion.div>
