@@ -147,7 +147,7 @@ const BlogNewsroom: React.FC = () => {
             icon: getCategoryIcon(getCategoryFromContent(item.title || '', item.description || '')),
             views: `${Math.floor(Math.random() * 20 + 5)}.${Math.floor(Math.random() * 9)}K`,
             tags: extractTags(item.title || '', item.description || ''),
-            mediumLink: item.link || 'https://medium.com/@xorion_network',
+            mediumLink: item.link || item.guid || `https://medium.com/@xorion_network`,
             twitterLink: 'https://x.com/Xorion_Network',
             source: 'medium',
             thumbnail: item.thumbnail || null,
@@ -306,6 +306,15 @@ const BlogNewsroom: React.FC = () => {
     };
 
     loadContent();
+
+    // Auto-refresh Medium posts every 5 minutes to get latest posts
+    const refreshInterval = setInterval(() => {
+      fetchMediumPosts();
+    }, 5 * 60 * 1000); // 5 minutes
+
+    return () => {
+      clearInterval(refreshInterval);
+    };
 
     const setupAnimations = () => {
       try {
