@@ -247,7 +247,7 @@ const BlogNewsroom: React.FC = () => {
         {
           id: 'twitter-1',
           title: "🚀 XorionChain Mainnet 4.0 is LIVE!",
-          excerpt: "The future of quantum-resistant blockchain is here. Experience 100k+ to 5k+ TPS with unbreakable security. #QuantumProof #Blockchain",
+          excerpt: "The future of quantum-resistant blockchain is here. Experience 5k+ TPS with unbreakable security. #QuantumProof #Blockchain",
           category: 'network',
           author: "@xorionchain",
           date: "2025-09-15",

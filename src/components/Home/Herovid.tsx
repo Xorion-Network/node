@@ -28,7 +28,7 @@ const Herovid = () => {
     },
     {
       icon: <FaBolt className="w-8 h-8" />,
-      title: "100k+ to 5k+ TPS",
+      title: "5k+ TPS",
       description: "Lightning-fast transaction processing with sub-second finality",
       gradient: "from-blue-500 to-cyan-500",
       delay: 0.2
