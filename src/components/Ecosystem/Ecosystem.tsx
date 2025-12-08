@@ -236,7 +236,7 @@ const Ecosystem = () => {
       category: "Core Team & Advisors",
       initialRelease: "0%",
       vestingPeriod: "36 months",
-      description: "12-month cliff, 36-month vesting",
+      description: "36-month vesting",
       color: "from-purple-500 to-pink-500",
       amount: "180M XOR"
     },

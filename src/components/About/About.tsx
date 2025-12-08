@@ -117,12 +117,6 @@ const About = () => {
       photo: "/RGB/jabulani usen.png"
     },
     {
-      name: "Clement Kalu",
-      position: "Full Stack Developer",
-      linkedin: "https://www.linkedin.com/in/inspikalu/",
-      photo: "/RGB/Clement Kalu.png"
-    },
-    {
       name: "Yusuf Owolabi",
       position: "Blockchain Audit & Security Manager",
       linkedin: "https://www.linkedin.com/in/owolabi-yusuf-717447156",
